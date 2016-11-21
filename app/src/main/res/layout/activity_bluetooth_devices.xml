@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bluetooth_devices"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zjut.sky.androidbleformotor.BluetoothDevicesActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_bluetooth_scan"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设备搜索"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:textSize="18dp"/>
+
+    </android.support.v7.widget.Toolbar>
+    <Switch
+        android:id="@+id/scan_device_switch"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="搜索设备"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="可用设备"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:background="#ffffff" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.zjut.sky.androidbleformotor.ListViewForScrollView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.zjut.sky.androidbleformotor.ListViewForScrollView>
+    </ScrollView>
+</LinearLayout>
